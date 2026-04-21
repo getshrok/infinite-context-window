@@ -1,0 +1,30 @@
+# Scenario 06 - Session 02
+# Completely different topic — no mention of formatting preferences
+
+User: I want to try making homemade ramen this weekend. Is it super complicated?
+
+Assistant: It depends on how deep you want to go. A full tonkotsu broth from scratch takes 12+ hours of simmering pork bones. But a really satisfying bowl of ramen is totally achievable in a couple of hours if you use a good base and focus on the toppings.
+
+User: Let's say I want something that tastes great but doesn't require me to start on Friday night.
+
+Assistant: Totally doable. A shoyu or miso ramen is a great weekend project. You can make a flavorful chicken or pork broth in about two hours, and the tare — the seasoning paste — comes together quickly. The fun part is assembling the toppings.
+
+User: What toppings are essential?
+
+Assistant: The classics are soft-boiled marinated eggs, chashu pork belly, green onions, nori, and bamboo shoots. If you want something simpler, even just a good jammy egg and some sliced pork shoulder goes a long way. The egg alone makes a huge difference.
+
+User: How do you make the marinated egg?
+
+Assistant: Soft-boil the eggs for exactly 6 to 7 minutes, then immediately move them to an ice bath. Once they're cool, peel them and submerge them in a mixture of soy sauce, mirin, and a little sake or water — roughly equal parts soy and mirin. Let them sit in the fridge for at least 4 hours, overnight is better. They'll turn a deep amber color and have a slightly jammy yolk.
+
+User: That sounds amazing. What about the broth — what should I actually buy at the store?
+
+Assistant: For a shortcut shoyu ramen, grab chicken thighs or a whole chicken for the broth base, plus aromatics — ginger, garlic, green onion tops. For the tare you'll want soy sauce, mirin, and sake. Pick up fresh ramen noodles from an Asian grocery if you can find them — they're worth it over the dried kind. And get dashi powder or kombu to add depth.
+
+User: I think I can find most of that. How long will the broth actually take?
+
+Assistant: If you're using chicken, about 90 minutes of simmering gets you a clean, flavorful broth. Brown the chicken pieces first for extra depth, then add your aromatics and water. Skim the foam off in the first 10 minutes and you'll end up with a clear, rich stock. Strain it, season it with your tare, and you're ready to go.
+
+User: Okay I'm actually excited about this now. I'll report back.
+
+Assistant: Please do — ramen is one of those things that feels like a big project the first time and then becomes totally natural. Enjoy the process.

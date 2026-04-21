@@ -1,0 +1,30 @@
+# Scenario 26 - Session 01
+# Work project — push notifications for mobile app
+
+User: Hey, I'm working on a new feature for our company's mobile app this month — we're adding push notifications. I don't have much experience with this. Where do I start?
+
+Assistant: Push notifications have a few moving parts but the architecture is pretty standard. For a mobile app you're generally working with APNs for iOS and FCM for Android — or more commonly, a service like Firebase Cloud Messaging that abstracts both. Do you know which platforms you're targeting, and what backend stack you're working with?
+
+User: Both iOS and Android. Backend is Node.js. We were thinking about using Firebase Cloud Messaging since it handles both.
+
+Assistant: FCM is the right call for a cross-platform setup with a Node backend. The flow is: your app registers with FCM and gets a device token, that token gets sent to your backend and stored, and then when you want to send a notification you call the FCM API with the token and the message payload. The Firebase Admin SDK for Node makes that API call straightforward.
+
+User: Makes sense. What do I need to set up on the backend side?
+
+Assistant: On the backend you'll need to install the firebase-admin package, initialize it with a service account credential, and set up an endpoint to receive and store device tokens from the app. Then you'll build a notification sending function that takes a token (or a topic or a list of tokens) and a payload. The payload typically has a title, body, and optional data object for any custom data you want the app to handle when the notification is tapped.
+
+User: What's the token storage look like? Just a column on the user table?
+
+Assistant: A dedicated table is better than a column on users, because one user might have multiple devices. A tokens table with user_id, device_token, platform (ios/android), and created_at is a common pattern. You'll also want to handle the case where a token becomes invalid — FCM returns a specific error when that happens and you should delete stale tokens from your table when you see that response.
+
+User: Oh I hadn't thought about stale tokens. How often does that happen?
+
+Assistant: More often than you'd expect — tokens go stale when a user uninstalls the app, when the app is unused for a long time, or when they get a new device. FCM will return a registration-token-not-registered error code for invalid tokens. You should handle that in your sending logic: catch that specific error and delete the token from your table. If you don't, your stored tokens will slowly fill with invalid entries and you'll see increasing send failures.
+
+User: Got it. What are the biggest gotchas for someone doing this for the first time?
+
+Assistant: A few things trip people up: notification permissions on iOS require an explicit user prompt and many users decline, so build for the case where you don't have permission. Android has added battery optimization restrictions that can delay or suppress notifications on some devices — worth testing on a real device, not just an emulator. And for both platforms, test the behavior when the app is in the foreground versus background versus completely closed — the notification handling code differs in each state. Start with background notifications since that's the most common case and the one users expect.
+
+User: Really useful. I think I have enough to start architecting this. Thanks.
+
+Assistant: Good luck with it. Push notifications feel complicated at first but once the token flow is working the rest comes together pretty quickly. Let me know if you hit snags.

@@ -1,0 +1,34 @@
+# Scenario 14 - Session 01
+# User mentions a meeting, gives wrong day, then corrects it
+
+User: I need to prep for a pretty important meeting coming up. Can you help me think through it?
+
+Assistant: Of course. What's the meeting about, and who's going to be in the room?
+
+User: It's a stakeholder alignment meeting about the Q3 roadmap. There'll be the CPO, a few product managers, and the engineering lead.
+
+Assistant: That's a high-stakes room. What's the main thing you need to walk out of that meeting with — a decision, alignment on priorities, buy-in on a specific plan?
+
+User: Mainly buy-in. There are two competing priorities and I need them to agree on which one comes first.
+
+Assistant: Got it. In that kind of meeting, your job is to make the choice feel easy — not to advocate for one option, but to lay out the trade-offs so clearly that the room can actually make a call. What are the two priorities?
+
+User: One is improving the core search experience, which has been getting complaints. The other is launching a new collaboration feature that sales has been promising to enterprise customers.
+
+Assistant: Classic tension — fixing what's broken versus shipping what's been sold. The framing that tends to work is connecting each option to a risk: if you fix search first, you reduce churn risk; if you launch the collaboration feature first, you reduce revenue risk and protect the sales pipeline. Let the stakeholders weigh those risks against each other rather than debating which feature is more important.
+
+User: I like that. The meeting is on Tuesday by the way, so I don't have a ton of time.
+
+Assistant: Tuesday is close. Do you already have a deck, or are you starting from scratch?
+
+User: I have a rough deck. It needs tightening. Oh wait, actually I got the day wrong — it's Wednesday, not Tuesday. Can you make a note of that?
+
+Assistant: Noted — the meeting is Wednesday, not Tuesday. That gives you a little more breathing room. What does the deck look like right now? Walk me through the rough structure.
+
+User: It's got a slide on each priority, a timeline comparison, and then a slide with open questions. But it feels scattered.
+
+Assistant: The open questions slide is probably what's making it feel scattered — you want the meeting to end in a decision, not in more questions. Try restructuring it so the deck tells a story: start with the business context (why this choice matters now), then the two options with their trade-offs framed as the risk comparison, then a recommendation or a clear decision prompt. Close with one slide that says here's what we need to decide today. That tightens the narrative.
+
+User: That's a much cleaner arc. I'll rework it tonight.
+
+Assistant: Good plan. If you want to share the deck or walk through any specific slides, I'm happy to give feedback. Good luck Wednesday.

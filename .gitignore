@@ -1,0 +1,5 @@
+node_modules/
+dist/
+eval/output/
+eval/.memory/
+.env

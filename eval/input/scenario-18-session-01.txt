@@ -1,0 +1,130 @@
+# Scenario 18 - Session 01
+# Dense coding session — webhook handler for Hermes project in TypeScript
+
+User: Hey, I'm starting work on the webhook handler for Hermes. We need to handle incoming Stripe webhooks. Where should I start?
+
+Assistant: Good place to start is the verification step — Stripe signs every webhook payload and you should verify that signature before you do anything else with the data. The basic shape of the handler is: receive raw body, verify signature, parse payload, dispatch to handlers. What's your server setup? Express?
+
+User: Yeah, Express. TypeScript.
+
+Assistant: Perfect. The key thing with Stripe webhooks in Express is that you need the raw body for signature verification — not the parsed JSON. Make sure you're using express.raw() on the webhook route specifically, not express.json(). If you run json() first, the signature check will fail.
+
+User: Oh good to know. So what does the handler function look like at a high level?
+
+Assistant: Something like this as a starting skeleton:
+
+```typescript
+export async function handleStripeWebhook(
+  req: Request,
+  res: Response
+): Promise<void> {
+  const sig = req.headers['stripe-signature'];
+  let event: Stripe.Event;
+
+  try {
+    event = stripe.webhooks.constructEvent(
+      req.body,
+      sig as string,
+      process.env.STRIPE_WEBHOOK_SECRET!
+    );
+  } catch (err) {
+    res.status(400).send(`Webhook Error: ${(err as Error).message}`);
+    return;
+  }
+
+  // dispatch on event.type
+  switch (event.type) {
+    case 'payment_intent.succeeded':
+      await handlePaymentIntentSucceeded(event.data.object);
+      break;
+    // add more cases
+    default:
+      console.log(`Unhandled event type: ${event.type}`);
+  }
+
+  res.json({ received: true });
+}
+```
+
+User: Nice. Should we use Zod anywhere here? We've been using it elsewhere in the project.
+
+Assistant: Yes, absolutely — Zod is great for validating the shape of event.data.object for each event type you handle. Stripe's TypeScript types give you the high-level structure, but if you're pulling specific fields out and storing them or passing them downstream, a Zod schema on each event's payload protects you from unexpected shapes. Define a schema per event type you care about.
+
+User: Makes sense. Let me write one for payment_intent.succeeded. What fields do we typically need?
+
+Assistant: For payment_intent.succeeded the most commonly needed fields are id, amount, currency, status, customer, and metadata. Here's a Zod schema:
+
+```typescript
+import { z } from 'zod';
+
+const PaymentIntentSchema = z.object({
+  id: z.string(),
+  amount: z.number(),
+  currency: z.string(),
+  status: z.string(),
+  customer: z.string().nullable(),
+  metadata: z.record(z.string()).optional(),
+});
+
+type PaymentIntent = z.infer<typeof PaymentIntentSchema>;
+```
+
+User: Great. I'll add that. Now I'm running into an issue — I'm getting a 400 back from Stripe when I test with the CLI. The error says 'No signatures found matching the expected signature for payload.'
+
+Assistant: That error almost always means the body has been parsed before the signature check. Double-check your Express middleware order. If you have app.use(express.json()) globally and your webhook route is mounted after it, the raw body is gone by the time Stripe tries to verify it. You need to register the webhook route with express.raw() before the global json middleware runs, or carve it out explicitly.
+
+User: Ah yeah that's exactly it. I had the json middleware running first. Let me fix that.
+
+Assistant: The pattern to use is something like this in your router setup:
+
+```typescript
+// Register webhook route BEFORE global json parser
+app.post(
+  '/webhooks/stripe',
+  express.raw({ type: 'application/json' }),
+  handleStripeWebhook
+);
+
+// Global json parser for all other routes
+app.use(express.json());
+```
+
+User: Fixed. The signature check is passing now. But now I'm seeing a different error — it seems like the payload was being parsed before the signature was verified in one of the older code paths. I found some dead code that was doing JSON.parse on the body early.
+
+Assistant: Good catch — that's actually a security issue, not just a bug. If you're parsing the payload before verifying the signature, you're processing potentially untrusted data. An attacker could send a malformed or malicious payload and have it partially processed before you reject it. The fix is exactly what you're doing: always verify the signature first using the raw bytes, and only parse after you have a verified event object back from Stripe. Make sure that dead code path is fully removed and can't be reached.
+
+User: Yeah I removed it. I made a note in the PR description that the payload was being parsed before the signature was verified — calling it out as a security fix.
+
+Assistant: Good call to document it explicitly. Reviewers should know that this was a security issue, not just a cleanup. It also helps with audit trails if anyone ever looks back at the commit history.
+
+User: Alright, the handler is working end to end now. I'm going to open the PR. Should I add any tests?
+
+Assistant: Definitely. A few tests worth having: one that verifies a valid signed payload is accepted and dispatched correctly, one that verifies an invalid signature returns 400, and one for each event type handler to confirm the Zod parsing and downstream logic behave as expected. You can use Stripe's own test fixtures or construct mock event objects manually.
+
+User: I'll write those. I'm going to mock the stripe.webhooks.constructEvent call in tests, is that okay?
+
+Assistant: Yes, that's the standard approach. You don't want to actually invoke Stripe's verification in unit tests — mock it to return a valid event object in the happy path, and throw a SignatureVerificationError in the failure path. Keep the integration test that actually exercises the raw body handling separate if you want one.
+
+User: Makes sense. PR is up. Marcus is reviewing it.
+
+Assistant: Good. Let me know if Marcus comes back with comments — happy to help work through any feedback.
+
+User: He flagged one thing — he wants the error logging to include the event type even on signature failure, for debugging purposes. But we don't have the event type at that point because we haven't parsed it yet.
+
+Assistant: Marcus has a point about debuggability, but he's right that you can't include the event type on a signature failure — you can't trust anything in the payload at that stage. A reasonable middle ground is to log whatever you can safely pull from the request headers at failure time: the timestamp from the Stripe-Signature header, the endpoint it hit, and the error message. That gives enough context for debugging without touching the unverified payload.
+
+User: That's a good answer. I'll add that and reply to his comment.
+
+Assistant: Sounds good. Logging the Stripe-Signature header components is safe since those come from Stripe, not the payload body.
+
+User: He approved it. Merging now.
+
+Assistant: Nice work. The security fix on the payload parsing is the important part — good that it's documented and reviewed. Anything left to wire up after the merge?
+
+User: We still need to handle the customer.subscription.deleted event for churn tracking. That's probably the next thing.
+
+Assistant: Got it. That one's straightforward — the data object will have the subscription ID and the customer ID, and you'll likely want to update your database record and trigger whatever churn notification or cleanup flow Hermes has. Want to start mapping out that handler now, or pick it up next session?
+
+User: Let's pick it up next time. I'm done for today.
+
+Assistant: Sounds good. Good session — solid security improvement and a clean PR. See you next time.

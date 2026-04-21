@@ -1,0 +1,35 @@
+# Scenario 22 - Session 02
+# Permission system design for Project Beta — RBAC, three tiers
+# No mention of JWT or Project Alpha auth approach
+
+User: Jordan here. I want to design the permission system for Project Beta. We need something that's simple but extensible.
+
+Assistant: Good problem to think through carefully early. Simple and extensible can pull in different directions — what's the user population and what kinds of things do you need to control access to?
+
+User: It's a SaaS product. We'll have customers who are organizations, and within each organization you'll have different types of users with different access levels. Think team members, team leads, and admins.
+
+Assistant: That maps naturally to role-based access control — RBAC. You define a set of roles with associated permissions, and assign users to roles. It's well-understood, easy to reason about, and works well for the kind of tiered access you're describing. The main question is how fine-grained you need the permissions to be.
+
+User: I think three tiers is right. Viewer — read only. Editor — can create and edit content but not manage users. Admin — full control including user management.
+
+Assistant: Those three tiers are clean and cover the obvious cases. Viewer, editor, admin is a classic model and it's easy to explain to customers. One thing to think through: is admin scoped to the organization, or is there a super-admin tier above that for your own operations team?
+
+User: Good catch — yeah we need a super-admin for our internal team. But let's keep that separate from the customer-facing roles for now.
+
+Assistant: Agreed — keep super-admin as an internal concept, not something customers ever see or configure. For the customer-facing model, define the three roles cleanly. A few decisions to nail down: are roles per-organization (so the same user can be a viewer in one org and an editor in another), or is role a user-level concept?
+
+User: Per-organization, definitely. Users might join multiple organizations.
+
+Assistant: Makes sense. That means your data model will have a join table between users and organizations that includes the role — something like user_id, org_id, role. That's the core of the RBAC implementation. When you enforce permissions you check the role for that user in the context of the relevant organization.
+
+User: Right. And should we hardcode the permissions for each role, or make them configurable?
+
+Assistant: For a first version, hardcode them — it's much simpler to reason about and you avoid a whole class of configuration bugs. You can always add configurability later if customers start asking for it. Document the permissions for each role clearly and enforce them in a central place in the API rather than scattered checks throughout the codebase.
+
+User: That's my preference too. Jordan-from-six-months-ago would have over-engineered this. Okay, so RBAC, three tiers, per-org role assignment, permissions hardcoded for now?
+
+Assistant: Exactly right. The hardcoded permissions are easy to enumerate at this stage — viewer gets read on everything, editor gets read plus create and update on content objects but not user or org management, admin gets everything including user management and org settings. Write that out explicitly and it becomes your source of truth.
+
+User: Perfect. I'll start on the implementation doc. Thanks.
+
+Assistant: Good luck with it, Jordan. The simple model will serve you well — you can always layer on more granularity if you need it, but you'll probably find three tiers covers 90% of what customers actually ask for.

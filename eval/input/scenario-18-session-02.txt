@@ -1,0 +1,22 @@
+# Scenario 18 - Session 02
+# Brief follow-up — user is casual, does not mention project name
+
+User: Hey, where did we leave off on the webhook stuff?
+
+Assistant: We got the main handler working end to end — signature verification, Zod validation on the payload, and the security fix where the payload was being parsed before the signature was verified. That PR was reviewed by Marcus and merged. The thing we hadn't started yet was the customer.subscription.deleted event handler for churn tracking. Is that where you want to pick up?
+
+User: Yeah, that's the one. Refresh me on what we need to do for that.
+
+Assistant: For the subscription deleted event, you'll need to pull the subscription ID and customer ID off the event payload, look up the corresponding record in your database, mark it as churned or cancelled, and then trigger whatever downstream flow you have — whether that's an internal notification, an email to the customer, or a cleanup job. Do you have a churn tracking table already, or does that need to be created?
+
+User: We have a subscriptions table. I think I just need to update a status field and fire an event.
+
+Assistant: Perfect, that's straightforward then. Are you publishing to an internal event bus, or is this more of a direct function call to a notification service? And should the subscription status update and the event fire happen in a transaction, or are they independent?
+
+User: Good question on the transaction. I hadn't thought about that. The status update matters more than the event fire — if the status update fails I don't want to fire the event.
+
+Assistant: Then yes, wrap it in a transaction: update the subscription status first, and only fire the event on successful commit. That way you never end up in a state where you've told downstream systems a customer churned but your own database still shows them as active. Want to sketch out the handler structure?
+
+User: Yeah let's do it.
+
+Assistant: Sure — do you want to use the same Zod schema pattern we used for the payment intent, or do you want to rely on Stripe's TypeScript types directly for this one? The subscription object is pretty well-typed by Stripe's SDK so you could go either way.

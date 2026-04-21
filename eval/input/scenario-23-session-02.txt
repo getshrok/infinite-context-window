@@ -1,0 +1,22 @@
+# Scenario 23 - Session 02
+# Unrelated conversation — no mention of Alice or any project
+
+User: I've been meaning to read more fiction. Any recommendations? I tend to like books that are character-driven but still have a strong plot.
+
+Assistant: Good combination to look for. A few that hit both well: The Secret History by Donna Tartt is deeply character-driven and has a propulsive plot held together entirely by the relationships. Pachinko by Min Jin Lee spans generations but every chapter is anchored in specific characters you come to care about. And if you haven't read A Little Life by Hanya Yanagihara, it's one of the most intensely character-focused novels of the last decade — though it's not light reading.
+
+User: I've heard of Pachinko but haven't picked it up. What's it actually about?
+
+Assistant: It follows a Korean family across four generations, starting in early 20th century Korea under Japanese occupation and moving through to 1980s Japan. The plot is built around the choices each generation makes under enormous pressure — survival, identity, belonging, discrimination. The characters are incredibly vivid and each generation's story feels complete while being connected to the whole. It's one of those books that stays with you.
+
+User: That sounds exactly like what I'm looking for. Is it a long read?
+
+Assistant: It's substantial — around 490 pages — but it moves fast. The chapters are short and each one tends to end in a way that makes you want to keep going. Most people who start it find it goes quickly despite the length.
+
+User: Okay, I'm sold. I'll grab it this week. What about something shorter for when I want a quicker read?
+
+Assistant: For something shorter and character-driven, Convenience Store Woman by Sayaka Murata is only about 160 pages and completely absorbing. It's about a woman who finds her identity through working in a convenience store and the social pressures pushing her to be something else. It's funny, a little strange, and very sharp. Alternatively, Of Mice and Men is a classic for a reason — devastating character work in under 200 pages.
+
+User: I read Of Mice and Men in school but it might be worth revisiting. I'll start with Pachinko though.
+
+Assistant: Good call — Pachinko first is the right move. Enjoy it.

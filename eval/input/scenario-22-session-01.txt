@@ -1,0 +1,34 @@
+# Scenario 22 - Session 01
+# Authentication design discussion for Project Alpha — JWT, RS256, refresh tokens
+
+User: Hey, Priya here. I want to talk through the auth design for Project Alpha. We need to nail down the token strategy.
+
+Assistant: Good timing to get this pinned down. What's the context — what kind of application is Project Alpha, and who are the users? That'll shape the token strategy pretty significantly.
+
+User: It's a web app with a React frontend talking to a Node API. Users are internal employees, maybe a few hundred. Security is a priority — we had an incident last year with long-lived tokens.
+
+Assistant: Given that history, short-lived access tokens are the right call. The standard pattern for this kind of setup is JWT access tokens with a short expiry — 15 minutes is typical — paired with refresh tokens that live in httpOnly cookies. The access token travels in the Authorization header, the refresh token never touches JavaScript. That combination gives you security without forcing users to log in constantly.
+
+User: That matches what I was thinking. 15 minutes for the access token feels right. What about the refresh token lifetime?
+
+Assistant: For an internal app with a few hundred employees, 8 hours is a reasonable refresh token lifetime — roughly a working day. You could go up to 24 hours if you want users to stay logged in across days, but given your security concerns I'd start conservative. Make sure you implement refresh token rotation so each use issues a new one and invalidates the old one — that way you can detect token theft.
+
+User: Good point on rotation. Now the signing question — we were debating HS256 versus RS256. What's your take?
+
+Assistant: RS256 is the better choice if you have multiple services that need to verify tokens. With HS256, every service that verifies tokens also has to know the secret, which means more places the secret can leak. With RS256, you sign with a private key and verify with a public key — services only need the public key. Given you might expand Project Alpha's backend over time, RS256 gives you cleaner separation.
+
+User: Yeah we're already thinking about adding a separate service for reporting. RS256 it is. What about key rotation?
+
+Assistant: A 30-day rotation cycle is a reasonable starting point for an internal app. The mechanics: you generate a new key pair, start signing new tokens with the new private key, but keep the old public key available for verification until all tokens signed with the old key have expired. Since your access tokens expire in 15 minutes, the overlap window is tiny — within 15 minutes of rotation you can retire the old key for verification too.
+
+User: So to confirm the decisions: JWT access tokens at 15 minutes, refresh tokens in httpOnly cookies, RS256 signing, keys rotated every 30 days?
+
+Assistant: That's correct — and I'd add: refresh token rotation on every use, and a token family approach so you can detect replay attacks. Those two together make the refresh mechanism much more robust.
+
+User: Agreed. Let's make sure we document this so the team isn't re-litigating it. What else should be in the auth design doc?
+
+Assistant: The doc should cover: the token format and claims (what's in the JWT payload), the signing algorithm and key management process, the refresh flow step by step, session invalidation (how do you log out or revoke tokens?), and error handling — what happens when a token is expired versus invalid. Also worth noting the storage decisions explicitly: access token in memory, refresh token in httpOnly cookie, and why.
+
+User: Perfect. I'll write that up today. Thanks.
+
+Assistant: Sounds good, Priya. Once you've got a draft I can review the flow diagram if you want a second set of eyes.

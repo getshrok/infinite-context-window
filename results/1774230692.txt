@@ -1,0 +1,38 @@
+
+> @getsaturday/memory@0.1.0 benchmark
+> tsx --env-file=.env scripts/benchmark.ts
+
+
+[bench] === Run 1/3 ===
+[bench] scenario4: compacting largest topic "portugal-summer-trip-planning" (519 tokens)
+[bench] run 1 scores: s1=1.00 s2=1.00 s3=1.00 s4=1.00 s5=1.00 s6=0.50
+
+[bench] === Run 2/3 ===
+[bench] scenario4: compacting largest topic "portugal-summer-vacation-planning" (519 tokens)
+[bench] run 2 scores: s1=1.00 s2=1.00 s3=1.00 s4=1.00 s5=1.00 s6=0.50
+
+[bench] === Run 3/3 ===
+[bench] scenario4: compacting largest topic "portugal-summer-trip-planning" (519 tokens)
+[bench] run 3 scores: s1=1.00 s2=1.00 s3=1.00 s4=1.00 s5=0.50 s6=0.50
+
+[bench] === Run 4/3 ===
+[bench] scenario4: compacting largest topic "portugal-summer-vacation-planning" (519 tokens)
+[bench] scenario3: expected topic not found for query "Which laptop should I buy for software d"
+[bench] run 4 scores: s1=1.00 s2=1.00 s3=0.75 s4=1.00 s5=0.50 s6=0.50
+
+[bench] === Run 5/3 ===
+[bench] scenario4: compacting largest topic "python-data-pipeline-debugging-and-testing" (861 tokens)
+[bench] run 5 scores: s1=1.00 s2=1.00 s3=1.00 s4=1.00 s5=1.00 s6=0.50
+
+BENCHMARK RESULTS
+=================
+topic_separation: 1.00  (min: 1.00)
+topic_continuation: 1.00  (min: 1.00)
+retrieval_precision: 0.95  (min: 0.75)
+compaction_fidelity: 1.00  (min: 1.00)
+cross_topic: 0.80  (min: 0.50)
+topic_drift: 0.50  (min: 0.50)
+-----------------
+COMPOSITE: 0.88  (min-composite: 0.79)
+
+[bench] total elapsed: 106.1s

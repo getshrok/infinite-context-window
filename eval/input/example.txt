@@ -1,0 +1,16 @@
+# This is an example conversation file. Lines starting with # are ignored.
+# Replace this file with your own conversation data.
+# File name: session-01.txt, session-02.txt, etc. (processed in order)
+
+User: I've been thinking about switching from Postgres to SQLite for the local dev environment. It would make setup a lot easier.
+Assistant: That's a reasonable trade-off. SQLite removes the need to run a database server locally, which cuts down on setup friction. The main thing to watch is if you're using any Postgres-specific features like jsonb operators or window functions — those won't translate directly.
+User: We use jsonb pretty heavily for the config store. Would that be a problem?
+Assistant: It would need some work. SQLite has JSON functions but the query syntax is different — you'd use json_extract() instead of the -> operator. Depending on how many queries you have, it might be a non-trivial migration. Could be worth auditing the queries first before committing to the switch.
+User: Good point. I'll do a quick grep and see how widespread it is before deciding.
+Assistant: That's the right call. If it's only a handful of places, the migration is probably worth it for the dev experience improvement. If it's everywhere, you might get more value from just improving the Postgres setup scripts instead.
+
+User: Different topic — what's the status on the onboarding flow redesign?
+Assistant: Last I heard, the design review was scheduled for Thursday. The main open question was whether the email verification step should be optional for SSO users.
+User: Right, I think it should be optional. If they're coming through SSO the email is already verified by the identity provider.
+Assistant: Agreed. That's a sensible default. Worth documenting the reasoning so the decision doesn't get re-litigated later.
+User: I'll add a note to the design doc.

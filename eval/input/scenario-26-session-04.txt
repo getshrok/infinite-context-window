@@ -1,0 +1,30 @@
+# Scenario 26 - Session 04
+# Home renovation — bathroom remodel, getting contractor quotes
+
+User: I'm planning a bathroom remodel. I've started getting quotes from contractors this month and it's already kind of overwhelming.
+
+Assistant: Bathroom remodels are notoriously one of the more complex home projects because of the plumbing and waterproofing involved. What's the scope — cosmetic refresh, full gut and redo, or somewhere in between?
+
+User: Pretty significant. New tile, new vanity, replacing the tub with a walk-in shower, and dealing with some water damage behind the walls.
+
+Assistant: That's a full gut job, especially with the water damage remediation. The water damage piece is important to handle correctly — it needs to be fully resolved before anything new goes in, and a good contractor will make that a priority rather than cover it up. Have any of the contractors flagged the water damage scope yet, or are the quotes all over the place?
+
+User: Very all over the place. I got three quotes and they range from $12,000 to $28,000 for essentially the same work.
+
+Assistant: A range that wide usually means a few different things: the contractors are scoping the job differently, their assumptions about the water damage extent vary, or you're seeing a real quality and reliability difference. The lowest quote isn't necessarily wrong, but I'd want to know if the cheapest one has a clear plan for the water damage or is hand-waving it. Ask each contractor to break down the quote by category — demo, waterproofing and water damage repair, tile, fixtures, plumbing. That makes the differences legible.
+
+User: That's smart. I hadn't thought to ask for a line-item breakdown. What else should I be asking them?
+
+Assistant: A few important questions: How long have they been doing bathroom remodels specifically — not just general contracting? Do they have their own crew or do they subcontract the plumbing and tile work? Can they provide references from similar jobs in the past year? What does the payment schedule look like — a reputable contractor won't ask for more than 30 to 40 percent upfront? And what's their timeline, and do they have other jobs running concurrently that might cause delays?
+
+User: Good list. What about permits? One contractor said I need one and another said I don't.
+
+Assistant: You almost certainly need a permit for the scope you've described — converting a tub to a shower involves plumbing changes, and dealing with water damage behind walls involves structural and waterproofing work. Permits protect you: the work gets inspected and you have documentation that it was done to code, which matters when you sell the house. A contractor who says you don't need one for work like this is either wrong or cutting corners to avoid the paperwork and inspection. Check with your local building department directly if you want to be sure.
+
+User: That's a red flag I'll take seriously. How long does a project like this typically take?
+
+Assistant: A full bathroom gut remodel with water damage remediation typically takes 3 to 5 weeks if the contractor is focused on your job. The tile work alone needs time for setting and curing, and if any additional water damage is found once the walls are open, that can add time. Buffer for at least a week beyond whatever the contractor estimates — surprises behind walls are common in older bathrooms.
+
+User: One contractor said two weeks which now sounds unrealistic.
+
+Assistant: Two weeks for that scope is very aggressive, especially with water damage in the mix. It's possible if they're throwing a large crew at it and everything goes perfectly, but it's not a conservative estimate. I'd ask them to walk you through how they get there — it might reveal optimistic assumptions about the water damage or the tile timeline that you'd want to surface before signing.

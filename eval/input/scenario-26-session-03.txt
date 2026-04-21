@@ -1,0 +1,26 @@
+# Scenario 26 - Session 03
+# Learning Spanish — Duolingo plus tutor named Elena
+
+User: I've been learning Spanish this month — using Duolingo daily and I also started working with a tutor named Elena. I'm a complete beginner. Any tips?
+
+Assistant: Great combination — Duolingo builds vocabulary and habits, and a tutor provides the speaking practice and real-time feedback that apps can't replicate. As a complete beginner, the most important thing is getting speaking time as early as possible, even when it feels embarrassing. How often are you meeting with Elena?
+
+User: Once a week for an hour. She's really good — very patient. We do a lot of conversational practice even at my level.
+
+Assistant: Once a week with a patient, conversation-focused tutor is an excellent setup. The conversational approach is especially valuable for beginners because it teaches you how language actually works in real exchanges — not just isolated vocabulary. To get the most out of the sessions, try to come with specific things you wanted to say during the week but couldn't. That makes the learning directly relevant.
+
+User: That's a good idea. I've been writing down words I want to look up. I can bring those to Elena.
+
+Assistant: Even better — bring the full sentences you tried to say and couldn't, not just isolated words. Context makes vocabulary stick much faster. Elena can show you the idiomatic way to express what you meant, which is more useful than a direct translation.
+
+User: Should I be supplementing with anything else beyond Duolingo and the tutoring?
+
+Assistant: At the beginner stage, I'd add one thing and keep it sustainable: listening to Spanish. Even if you understand almost nothing at first, your ear starts calibrating to the rhythm and sounds of the language. Easy Spanish on YouTube does slow street interviews with subtitles and is popular with beginners. A simple Spanish podcast or a show you've already watched dubbed in Spanish is also good. Don't add so much that it stops being fun — consistency over quantity.
+
+User: I like the idea of watching something I know in Spanish. Is Duolingo enough for grammar or should I do more on that?
+
+Assistant: Duolingo covers the basics but it doesn't explain grammar in depth — it teaches by pattern rather than by rule. For a beginner, that's fine. But if you find yourself confused about why something works a certain way, a simple reference like the Spanish grammar section on SpanishDict or a beginner book like Practice Makes Perfect: Spanish Verb Tenses can fill those gaps. Bring the grammar questions to Elena too — she can explain in a way that's tailored to your specific confusions.
+
+User: Good call. I'm enjoying it more than I expected honestly. How long until I can hold a basic conversation?
+
+Assistant: With daily Duolingo and weekly tutoring sessions focused on conversation, most people reach basic conversational ability — able to handle everyday topics with some stumbling — in around 3 to 6 months. You're building the foundation right now. The jump from beginner to conversational often feels sudden when it happens — one day you realize you're stringing sentences together without consciously translating. Keep going.

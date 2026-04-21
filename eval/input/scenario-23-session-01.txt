@@ -1,0 +1,38 @@
+# Scenario 23 - Session 01
+# Project planning — Alice is the frontend lead on dashboard redesign
+
+User: Can you help me put together a project overview for the dashboard redesign? We're kicking it off this week.
+
+Assistant: Happy to help. What are the main goals of the redesign? And do you have the team assembled already?
+
+User: The goals are to improve usability and modernize the data visualization components. The current dashboard is hard to read and our power users have been complaining about the charts specifically.
+
+Assistant: That's a clear scope — usability and visualization are both concrete enough to design toward. What's the team structure? Do you have a frontend lead lined up?
+
+User: Yes, Alice is the frontend lead. She's specifically owning the data visualization components — that's her specialty, she's done a lot of D3 work before.
+
+Assistant: Great fit for the role then. Data visualization redesigns live and die on the frontend implementation — having someone with deep D3 experience on the visualization components specifically is exactly the right assignment. What about backend and design?
+
+User: Design is covered by our UX team, they're already doing research. Backend is pretty minimal — mostly just making sure the API returns data in formats that are easier to consume for the new charts.
+
+Assistant: That's a relatively self-contained project then, which is good. What's the timeline looking like?
+
+User: We're targeting end of Q2 for the full launch. That's Alice's deadline for the visualization components specifically.
+
+Assistant: End of Q2 is achievable for a focused redesign if the scope doesn't expand. What does the milestone structure look like between now and then — do you have checkpoints, or is it a single delivery?
+
+User: We're thinking three milestones: design sign-off in about three weeks, a working prototype by mid-Q2, and then final launch at the end of Q2.
+
+Assistant: That's a sensible structure. The design sign-off is the critical gate — if that slips, everything downstream slips. I'd put the most attention on making sure the UX research and design iterations happen fast. Alice can start on component architecture in parallel with the design work so she's not sitting idle, but the visualization components will need the final designs to be fully built.
+
+User: Good point. I'll flag that dependency explicitly in the project plan.
+
+Assistant: Worth noting it in the kick-off too so Alice and the UX team have shared visibility on the dependency. Anything else you want in the project overview — risks, success metrics, out of scope?
+
+User: Yes, let's add success metrics. I'm thinking chart load time, user satisfaction score, and reduction in support tickets about the dashboard.
+
+Assistant: Those are solid. I'd make sure you have baseline measurements for all three before the launch — especially support ticket volume, which is easy to forget to capture beforehand. If you can get a pre-launch satisfaction score from your power users through a quick survey, that gives you a clean before/after comparison. Chart load time you can instrument in the prototype phase.
+
+User: Great. I think I have enough to write the overview now.
+
+Assistant: Sounds like a well-structured project. Alice having the visualization work end of Q2 gives the team a clear north star — good luck with the kick-off.

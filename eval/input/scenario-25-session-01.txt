@@ -1,0 +1,66 @@
+# Scenario 25 - Session 01
+# Rapid topic switching — kitchen tiles, work presentation, 10k training, Amsterdam trip
+
+User: I have a million things going on. Can we just talk through a few of them?
+
+Assistant: Of course. What's on your mind?
+
+User: Okay first — I'm replacing the kitchen tiles. The old ones are cracked and ugly. I'm trying to decide between doing it myself or hiring someone.
+
+Assistant: Good question to think through. DIY tile work is very doable but it's time-consuming and the prep matters a lot — if the substrate isn't clean and level, tiles will crack or pop. What's the scale of it? Just a backsplash, or the full floor?
+
+User: Full floor. It's a medium-sized kitchen, maybe 150 square feet.
+
+Assistant: At 150 square feet, it's a real weekend project — more like a long weekend project if you're doing it for the first time. The tile work itself is learnable, but the demo and floor prep phase is messy and physically demanding. If you have the time and patience for it, DIY saves a meaningful amount of money. If you're tight on time, a pro will do it in a day or two. What's your timeline?
+
+User: No hard deadline on the tiles. Anyway — completely different topic — I have a big work presentation next week and I'm nervous about it.
+
+Assistant: What's the presentation about, and who's the audience?
+
+User: I'm presenting our Q2 results and the strategy for the second half of the year to the executive team. Maybe 10 people in the room, including the CEO.
+
+Assistant: That's a high-stakes room. The most important thing for that kind of executive presentation is leading with the headline — don't make them wait for the point. Open with the Q2 summary in one or two sentences, then the strategy recommendation, then the evidence. Executives will often stop you to ask questions early, so if you've front-loaded the key message, an interruption doesn't derail you.
+
+User: That's good advice. I tend to build up to the main point. I'll flip the structure. Hey, can I also ask about my 10k training?
+
+Assistant: Sure, go for it.
+
+User: I'm training for a 10k race — my first one. I've been running for about two months. I can comfortably do 5k now but the jump to 10 feels daunting.
+
+Assistant: Two months in and consistently hitting 5k is a solid foundation. The jump to 10k is mostly mental — the physical adaptation follows the training. The standard approach is to add no more than 10% distance per week to reduce injury risk. So if your long run right now is 5k, you'd stretch to 5.5k next week, 6k the week after, and so on. At that rate you'd be comfortably at 10k in about 8 to 9 weeks.
+
+User: That's reassuring. When's a realistic race date at that pace?
+
+Assistant: If you start the progression now, you'd be race-ready in roughly two months — so late spring would be a natural target. Give yourself one or two easy weeks before the race as a taper. Most beginner 10k plans are 8 to 10 weeks total.
+
+User: Perfect. Okay, completely different again — I'm planning a trip to Amsterdam. Never been. When's the best time to go?
+
+Assistant: Amsterdam is great most of the year but spring is the classic answer — April through May when the tulips are in bloom and the weather is mild. The city is lively, the parks are beautiful, and it's before the peak summer crowds. That said, summer is also lovely and has the longest daylight hours. What kind of trip are you thinking — city exploration, museums, day trips?
+
+User: Mix of everything. I definitely want to do the Rijksmuseum and some canal boat stuff. Maybe a day trip to see the tulips.
+
+Assistant: Then April is your answer — the Keukenhof Gardens are open only from late March to mid-May and they're the iconic tulip experience. Book that well in advance, it gets crowded. The Rijksmuseum is worth at least half a day, and I'd also recommend the Van Gogh Museum which is right next door. Canal boats you can do as a relaxed evening activity — some of the evening light tours are really beautiful.
+
+User: I love this. Okay back to the tiles for a second — what type of tile do you recommend for a kitchen floor?
+
+Assistant: For a kitchen floor, porcelain is the standard recommendation — it's durable, water-resistant, and easy to clean. Get something with a matte or textured finish rather than high-gloss, which shows every footprint and gets slippery when wet. A format around 12x24 or 24x24 inches tends to look clean and modern in a medium kitchen without making the space feel overwhelmed by pattern.
+
+User: Good to know. I was leaning toward something with a stone look.
+
+Assistant: Stone-look porcelain is a great choice — you get the aesthetic without the maintenance hassle of real stone, which needs sealing and is more porous. There are some excellent options in that style at most tile suppliers.
+
+User: Great. Back to Amsterdam — how long should I plan to stay?
+
+Assistant: Four to five days is the sweet spot. You can do the major museums without rushing, have time for wandering the Jordaan neighborhood and the canal belt, fit in a day trip to Keukenhof or Haarlem, and still have an evening to just sit at a canal-side cafe and decompress. Three days feels a bit rushed; a week is lovely if you want a slower pace.
+
+User: Five days sounds right. And for my presentation — how do I handle nerves in the room?
+
+Assistant: The best antidote to presentation nerves is knowing your material so well that you don't need to think about what comes next. Practice out loud at least twice — not just reading through the slides, but actually speaking it as if the audience is there. The physical act of speaking out loud prepares a different part of your brain than reading does. In the room, slow down deliberately — nerves make people rush, and slowing down makes you sound more confident and gives you time to think. And remember that executive audiences are rooting for you to make a clear point — they want the meeting to go well too.
+
+User: That's actually really helpful. I'll practice out loud tonight.
+
+Assistant: Good. Even one full run-through out loud will make a noticeable difference. Good luck next week.
+
+User: Thanks. Okay one last thing on the 10k — should I be doing any strength training alongside the running?
+
+Assistant: Yes, it helps a lot for injury prevention especially as you increase mileage. You don't need a complicated program — focus on your glutes, hips, and core. Squats, lunges, glute bridges, and single-leg work twice a week will shore up the muscle imbalances that lead to common running injuries like IT band syndrome and runner's knee. Keep it simple and consistent rather than heroic.

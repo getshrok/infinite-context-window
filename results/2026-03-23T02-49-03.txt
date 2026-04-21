@@ -1,0 +1,10 @@
+
+BENCHMARK RESULTS
+=================
+terse_engineer: 1.00  (min: 1.00)
+scatterbrained: 1.00  (min: 1.00)
+life_transition: 0.95  (min: 0.88)
+professional: 1.00  (min: 1.00)
+verbose_storyteller: 1.00  (min: 1.00)
+-----------------
+COMPOSITE: 0.99  (min-composite: 0.97)

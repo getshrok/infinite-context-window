@@ -1,0 +1,26 @@
+# Scenario 26 - Session 02
+# Personal health — physiotherapy for shoulder injury from climbing
+
+User: I've been dealing with a shoulder injury from climbing — started physio this month. It's frustrating because I can't climb at all right now.
+
+Assistant: Shoulder injuries from climbing are really common, and the forced rest is genuinely hard when climbing is something you love. What's the injury? Rotator cuff, labrum?
+
+User: My physio thinks it's a rotator cuff strain — probably from overloading on a dyno move. Not a full tear, which is a relief.
+
+Assistant: A strain rather than a tear is meaningfully better news — recovery timelines are much shorter and you typically don't end up in surgery territory. With consistent physio, rotator cuff strains often resolve in 6 to 12 weeks, though it varies depending on severity. How's the physio going so far?
+
+User: The exercises feel almost insultingly easy right now — a lot of band work and gentle range of motion stuff. I keep wanting to do more.
+
+Assistant: That frustration is really normal, and it's also one of the main ways people extend their recovery — doing more than the physio recommends because the early exercises feel trivial. The band work and range of motion exercises are doing important work even when they feel easy: re-establishing motor patterns, reducing inflammation, rebuilding the stabilizer muscles in a controlled way. The physio is pacing the load deliberately. Trust the boring stuff.
+
+User: Yeah I know you're right. Is there anything I can do to stay fit while I can't climb?
+
+Assistant: Quite a bit, actually. Your legs are completely fine — running, cycling, hiking, or leg-focused gym work won't touch the shoulder. Core work that doesn't load the shoulder (planks, dead bugs, hollow holds) is also fair game and will actually help your climbing when you return. Swimming is out for now if the shoulder is irritated by overhead movement, but walking and lower body cardio keep your fitness base without risking setback.
+
+User: That's helpful. The mental side is hard too — my whole social life revolves around the climbing gym.
+
+Assistant: That's a real loss, not just a physical one. A lot of climbers in your situation find it helpful to still go to the gym to watch, belay, or just hang out — it keeps the social connection alive without putting load on the shoulder. Your physio might even clear you for easy bouldering footwork drills on the wall once you're further along, where you're just using your feet and keeping the arm passive. Worth asking when the time is right.
+
+User: Oh that's a good idea — I hadn't thought about still going just to belay. I'll ask the physio about the footwork stuff.
+
+Assistant: It's a good question to bring up at your next session. In the meantime, hang in there — the early phase of physio is the most annoying and it does get more interesting as you progress.

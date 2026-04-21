@@ -1,0 +1,30 @@
+# Scenario 26 - Session 05
+# Side project — personal finance tracker in Python
+
+User: I've been working on a side project this month — building a personal finance tracker in Python. It's just for me, nothing fancy. Where should I start with the data model?
+
+Assistant: A personal finance tracker is a fun project that's actually very useful. For the data model, the core entities are usually: accounts (your bank accounts, credit cards, etc.), transactions (individual income or expense items), and categories (how you classify transactions). What are you most interested in tracking — spending by category, net worth, cash flow, or all of the above?
+
+User: Mainly spending by category and my overall cash flow month over month.
+
+Assistant: For that focus, your core model is pretty simple. Transactions is the central table — each row needs an amount, date, description, account_id, and category. Accounts has a name and account type. Categories is just a list of names like groceries, rent, transport, dining, and so on. With those three tables you can calculate spending by category and cash flow for any time period. Do you want to store the data in a proper database or a flat file like CSV or SQLite?
+
+User: SQLite seems like the right call. It's just for me so I don't need a full database server.
+
+Assistant: SQLite is perfect for this — lightweight, file-based, and Python's standard library includes sqlite3 so there's nothing to install. If you want something a bit more ergonomic, SQLAlchemy with a SQLite backend gives you an ORM and is easy to set up for a project like this. Either approach works well.
+
+User: I'll use SQLAlchemy. How do I import my actual bank transactions? I don't want to enter them manually.
+
+Assistant: Most banks let you export transactions as CSV or OFX files. CSV is easiest to work with in Python — pandas can read them in one line. The main challenge is that every bank formats their CSV slightly differently, so you'll need a parsing layer that maps each bank's column names and date formats to your internal schema. If you have two or three banks, write a simple parser class for each one. It's tedious once and then it runs forever.
+
+User: I have two banks and one credit card. Not bad. What about categorization — do I manually tag everything?
+
+Assistant: You can start with rule-based auto-categorization and manual fallback. Write simple rules that match on the transaction description — if the description contains "Whole Foods" or "Trader Joe's", categorize it as groceries; if it contains "Netflix" or "Spotify", categorize it as subscriptions. A dictionary of keyword-to-category mappings handles probably 60 to 70 percent of transactions automatically. The rest you flag for manual review. Over time your rules will cover more and the manual load shrinks.
+
+User: That's really practical. What's a good way to visualize the output? I want something simple.
+
+Assistant: For a personal project, matplotlib is the easiest path — it's built for exactly this kind of exploratory analysis. A bar chart of spending by category per month is usually the most useful view. If you want something that feels a bit more polished without a lot of extra work, Plotly generates interactive charts you can open in a browser, which makes it easier to hover and explore the data. Either works fine for personal use. You could also just dump summaries to a simple HTML file and open it in your browser — sometimes the simplest output is the most sustainable.
+
+User: I like the Plotly idea. I'll try that. This is coming together more clearly than I expected.
+
+Assistant: Finance trackers are one of those projects that seem complex but have a very tractable core once you break them down. The CSV import and categorization logic is the most work, but once that pipeline is running, adding new analysis views is straightforward. Have fun with it.

@@ -1,0 +1,39 @@
+# Scenario 6 — Preference Contradiction
+# Expect: most recent preference (no bullets) wins
+how does the user prefer responses to be formatted?
+what did the user say about bullet points?
+
+# Scenario 14 — Correction Handling
+# Expect: corrected version (Wednesday) surfaces, not the original (Tuesday)
+when is the user's meeting?
+what day was the meeting corrected to?
+
+# Scenario 16 — Refusal to Hallucinate (negative query)
+# Expect: no results or clearly irrelevant results
+what did we discuss about the Paris office expansion?
+
+# Scenario 18 — Topic Continuity
+# Expect: webhook/Hermes project content retrieved
+where did we leave off on the coding project?
+what was the security fix in the webhook handler?
+
+# Scenario 22 — Cross-Topic Reasoning
+# Expect: both Project Alpha auth and Project Beta permission content retrieved
+would the auth approach from Project Alpha work for Project Beta's permission system?
+what signing algorithm did we choose for Project Alpha?
+
+# Scenario 23 — Entity Recall
+# Expect: Alice and her role returned
+what is Alice working on?
+who is the frontend lead?
+
+# Scenario 25 — Rapid Fire Topics (separate queries per topic)
+# Expect: each query returns its specific topic
+what is the status of the kitchen renovation?
+what is the user training for?
+where is the user travelling to?
+what is the work presentation about?
+
+# Scenario 26 — Cold Start / Broad Recall
+# Expect: multiple topics returned spanning recent activity
+what have we been working on this month?

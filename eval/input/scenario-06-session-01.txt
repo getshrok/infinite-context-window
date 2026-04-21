@@ -1,0 +1,52 @@
+# Scenario 06 - Session 01
+# User expresses a formatting preference (bullet points)
+
+User: Hey, I'm trying to plan out my week. Can you help me think through what I need to get done?
+
+Assistant: Of course! Let's start by listing everything on your plate. What are the main areas you're juggling right now — work projects, personal stuff, errands?
+
+User: Work mostly. I have a product review to prepare, a one-on-one with my manager, and I need to finish writing up the spec for the new onboarding flow.
+
+Assistant: Got it. So three main things: the product review prep, the one-on-one, and the onboarding spec. Do you have deadlines for any of those, or are they all this week?
+
+User: The product review is Thursday. The one-on-one is Wednesday. The spec doesn't have a hard deadline but I want to get a draft done by Friday.
+
+Assistant: That gives you a decent runway. I'd suggest front-loading the product review prep since Thursday comes fast — maybe spend tomorrow and Wednesday morning on it, then the one-on-one Wednesday afternoon clears your head before you dive into the spec Thursday and Friday.
+
+User: That makes sense. Can I ask you something kind of meta? Can you always format your responses as bullet points? I find it easier to scan.
+
+Assistant: Absolutely, happy to do that. I'll switch to bullet points going forward.
+
+User: Great. So what should I actually put in the product review? I've never run one before.
+
+Assistant: Here's what a solid product review typically covers:
+
+- Current state: where the product stands today — key metrics, recent changes, open issues
+- Goals recap: what you said you'd achieve last quarter and whether you hit them
+- Learnings: what worked, what didn't, and why
+- Next priorities: what you're planning to focus on and the rationale
+- Open questions: things you want the room to weigh in on
+
+User: That's really helpful. What about the one-on-one? I want to use it well.
+
+Assistant: Good one-on-ones are usually driven by you, not your manager. Things to bring:
+
+- Updates on your current projects — brief, not a status dump
+- Any blockers you need help with
+- Career questions or feedback you've been wanting
+- Anything you're uncertain about that you'd like their read on
+
+User: Okay. And for the onboarding spec, any tips on structure?
+
+Assistant: A functional spec for an onboarding flow usually needs:
+
+- Problem statement: why the current onboarding isn't working
+- User goals: what a new user needs to accomplish in their first session
+- Proposed flow: step-by-step walkthrough with states and edge cases
+- Success metrics: how you'll know the new flow is better
+- Out of scope: what you're explicitly not tackling
+- Open questions: decisions still to be made
+
+User: Perfect. I think I have a plan now. Thanks!
+
+Assistant: You're all set. Good luck with the review Thursday — sounds like you've got it under control.

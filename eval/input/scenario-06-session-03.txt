@@ -1,0 +1,34 @@
+# Scenario 06 - Session 03
+# User reverses their bullet point preference
+
+User: Hey, can you help me think through a decision? I'm trying to decide whether to switch to a four-day work week voluntarily — my company allows it but it comes with a pay cut.
+
+Assistant: That is a real trade-off worth thinking through carefully. What is drawing you toward it?
+
+User: I feel burned out. The extra day off would let me actually recover and have time for things I care about outside work.
+
+Assistant: That's a meaningful reason. Burnout that doesn't get addressed tends to compound — the productivity loss from staying at five days while running on empty can be worse than the output you'd lose from cutting to four. The question is whether the pay cut is actually manageable for you.
+
+User: It would be about a 20% reduction. That's not nothing but I could cover it.
+
+Assistant: If it's financially survivable, the calculus usually favors your wellbeing — especially when burnout is already present. Some people also find they're more effective in four focused days than five unfocused ones, which can protect your standing at work even with fewer hours.
+
+User: Yeah. I'm also wondering if it would affect how my manager sees me.
+
+Assistant: That's worth thinking about honestly. A lot depends on your manager and company culture. If your output stays strong, most reasonable managers adjust their expectations. It can help to frame it proactively — tell your manager you want to stay effective and have thought carefully about how to make it work, rather than just announcing you're going to four days.
+
+User: That makes sense. Okay, different topic — actually I've changed my mind about the bullet points. I find them more annoying than helpful now, please just write normally.
+
+Assistant: Sure, no problem. Back to regular prose.
+
+User: Appreciate it. So what's the best way to actually bring this up with my manager? Like what's the framing?
+
+Assistant: I'd schedule a dedicated conversation rather than dropping it into a one-on-one as an aside. Come in having already thought through the practical side — which day you'd take off, how you'd handle coverage, how you'd communicate availability. Lead with your commitment to your work and the team, and present the four-day schedule as a considered choice rather than a request born of frustration. That shifts it from sounding like a complaint to sounding like mature self-management.
+
+User: What if they push back?
+
+Assistant: Listen to what's actually behind the pushback. If it's about specific responsibilities or coverage, you can address those directly. If it's more vague discomfort, ask what would need to be true for them to feel good about it — that gives you something concrete to work with. And if the company formally allows it, you're on solid ground to keep advocating for it.
+
+User: Good point. I'll think about the timing of when to bring it up.
+
+Assistant: Timing matters. Avoid raising it in a stressful stretch or right before a big deadline — pick a moment when things are relatively steady and you've recently had a visible win. That context works in your favor.
